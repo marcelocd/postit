@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Postit</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <main style="height: 100%;">
+      <div class="row" style="height: 100%;">
+        <div class="col-md-4">
+          <%= render 'layouts/sidebar' %>
+        </div>
+        <div class="col-md-8">
+          <%= yield %>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

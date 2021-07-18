@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  username: "marcelo"
+  password: <%= ENV['APPNAME_DATABASE_PASSWORD'] %>
+
+development:
+  <<: *default
+  database: "postit_development"
+
+test:
+  <<: *default
+  database: "postit_test"
+
+production:
+  <<: *default
+  database: "postit_production"
