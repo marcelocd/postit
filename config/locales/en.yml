@@ -222,3 +222,5 @@ en-US:
   confirm_note_deletion: Are you sure you want to delete this note?
   done: Done
   delete: Delete
+  no_notes_found: No noutes found
+  note_not_found: Note not found

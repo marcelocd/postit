@@ -78,6 +78,10 @@ GEM
     childprocess (3.0.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
+    dotenv (2.7.6)
+    dotenv-rails (2.7.6)
+      dotenv (= 2.7.6)
+      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.3)
     globalid (0.4.2)
@@ -90,6 +94,18 @@ GEM
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    jsonapi-deserializable (0.2.0)
+    jsonapi-parser (0.1.1)
+    jsonapi-rails (0.4.0)
+      jsonapi-parser (~> 0.1.0)
+      jsonapi-rb (~> 0.5.0)
+    jsonapi-rb (0.5.0)
+      jsonapi-deserializable (~> 0.2.0)
+      jsonapi-serializable (~> 0.3.0)
+    jsonapi-renderer (0.2.2)
+    jsonapi-serializable (0.3.1)
+      jsonapi-renderer (~> 0.2.0)
+    jwt (2.2.3)
     listen (3.5.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
@@ -206,8 +222,11 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  dotenv-rails
   hashid-rails (~> 1.0)
   jbuilder (~> 2.7)
+  jsonapi-rails
+  jwt
   listen (~> 3.3)
   pg
   puma (~> 5.0)

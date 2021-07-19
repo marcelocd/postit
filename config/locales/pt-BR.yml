@@ -230,3 +230,5 @@ pt-BR:
   confirm_note_deletion: Tem certeza que deseja deletar esta nota?
   done: Pronto
   delete: Excluir
+  no_notes_found: Nenhuma nota encontrada
+  note_not_found: Nota não encontrada
