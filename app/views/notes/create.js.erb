@@ -1,0 +1,21 @@
+<% if @note.persisted? %>
+  <% @notes = Note.all
+                  .order(created_at: :desc)
+                  .to_a %>
+  renderNotes();
+  $('#new-title-input').val('')
+  $('#new-body-input').val('')
+<% else %>
+  displayErrorsAlert();
+<% end %>
+
+function renderNotes() {
+  var notesSelector = '#notes';
+  var notes = "<%= j render 'index' %>";
+
+  $(notesSelector).replaceWith(notes);
+}
+
+function displayErrorsAlert() {
+  alert("<%= @note.errors.full_messages.join(', ') %>");
+}

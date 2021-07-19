@@ -1,0 +1,14 @@
+<% notes.each do |note| %>
+  <div class="col-4">
+    <div class="card border-secondary mb-3" style="max-width: 18rem;">
+      <div class="card-header">
+        <%= note.title %>
+      </div>
+      <div class="card-body text-secondary">
+        <p class="card-text">
+          <%= truncate(note.body, length: 100) %>
+        </p>
+      </div>
+    </div>
+  </div>
+<% end %>

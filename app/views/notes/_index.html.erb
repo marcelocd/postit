@@ -1,0 +1,8 @@
+<div id="notes">
+  <% while @notes.present? %>
+    <div class="row justify-content-start">
+      <%= render partial: 'notes_row',
+                 locals: { notes: @notes.to_a.shift(3) } %>
+    </div>
+  <% end %>
+</div>

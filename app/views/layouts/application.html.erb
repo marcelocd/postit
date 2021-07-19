@@ -9,15 +9,16 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
     <main style="height: 100%;">
       <div class="row" style="height: 100%;">
-        <div class="col-md-4">
-          <%= render 'layouts/sidebar' %>
+        <div id="new-note-main-div" class="col-md-4">
+          <%= render 'notes/new' %>
         </div>
-        <div class="col-md-8">
-          <%= yield %>
+        <div id="notes-main-div" class="col-md-8">
+          <div class="container mt-5">
+            <%= yield %>
+          </div>
         </div>
       </div>
     </main>
