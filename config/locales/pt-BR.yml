@@ -227,3 +227,4 @@ pt-BR:
     pm: ''
   notepad: Bloco de notas
   cancel: Cancelar
+  confirm_note_deletion: Tem certeza que deseja deletar esta nota?

@@ -23,7 +23,7 @@ class NotesController < ApplicationController
   end
 
   def destroy
-    @article.destroy
+    @note.destroy
   end
 
   private

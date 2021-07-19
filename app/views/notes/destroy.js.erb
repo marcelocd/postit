@@ -1,0 +1,12 @@
+<% @notes = Note.all
+                .order(updated_at: :desc)
+                .to_a %>
+
+renderNotes();
+
+function renderNotes() {
+  var notesSelector = '#notes';
+  var notes = "<%= j render 'index' %>";
+
+  $(notesSelector).replaceWith(notes);
+}

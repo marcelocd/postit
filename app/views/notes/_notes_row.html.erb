@@ -1,9 +1,12 @@
 <% notes.each do |note| %>
   <div class="col-4">
-    <button type="button"
-            class="btn-close"
-            aria-label="Close">
-    </button>
+    <%= button_to '',
+                  note_path(note),
+                  method: :delete,
+                  class: 'btn-close',
+                  remote: true,
+                  'aria-label': 'Close',
+                  'data-confirm': t('confirm_note_deletion') %>
     <%= link_to edit_note_path(note), class: 'card border-secondary mb-3 note-card',
                                       style: 'max-width: 18rem;',
                                       remote: true do %>
