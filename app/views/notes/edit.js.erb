@@ -1,0 +1,10 @@
+<% @note = Note.find(params[:id]) %>
+
+renderNoteForm();
+
+function renderNoteForm() {
+  var formSelector = '#note-form';
+  var form = "<%= j render 'form' %>";
+
+  $(formSelector).replaceWith(form);
+}

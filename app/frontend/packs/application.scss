@@ -14,3 +14,20 @@ html, body {
 #new-note-main-div {
   background-color: #0F340F;
 }
+
+.note-card {
+  text-decoration: none;
+}
+
+.note-card:hover {
+  transition: transform 1s;
+  transform: scale(1.05);
+}
+
+.note-card:hover:after {
+  transition: transform 1s;
+}
+
+.card-title {
+  color: #212529;
+}

@@ -7,8 +7,10 @@ pt-BR:
           has_one: Não é possível excluir o registro pois existe um %{record} dependente
           has_many: Não é possível excluir o registro pois existem %{record} dependentes
   notes:
-    new_form:
+    form:
       title_placeholder: Título
+      create: Criar Nota
+      update: Atualizar Nota
   date:
     abbr_day_names:
     - dom
@@ -224,3 +226,4 @@ pt-BR:
       short: "%d de %B, %H:%M"
     pm: ''
   notepad: Bloco de notas
+  cancel: Cancelar

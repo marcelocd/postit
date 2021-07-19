@@ -1,0 +1,9 @@
+<% @note = Note.new %>
+renderForm();
+
+function renderForm() {
+  var notesSelector = '#note-form';
+  var notes = "<%= j render 'form' %>";
+
+  $(notesSelector).replaceWith(notes);
+}

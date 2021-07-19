@@ -7,8 +7,10 @@ en-US:
           has_one: Cannot delete record because a dependent %{record} exists
           has_many: Cannot delete record because dependent %{record} exist
   notes:
-    new_form:
+    form:
       title_placeholder: Title
+      create: Create Note
+      update: Update Note
   date:
     abbr_day_names:
     - Sun
@@ -216,3 +218,4 @@ en-US:
       short: "%d %b %I:%M %p"
     pm: pm
   notepad: Notepad
+  cancel: Cancel

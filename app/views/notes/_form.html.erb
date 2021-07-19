@@ -1,0 +1,38 @@
+<%= form_with model: @note,
+              url: note_form_url(@note),
+              method: note_form_method(@note),
+              id: 'note-form',
+              class: 'row g-3',
+              local: false do |f| %>
+  <div class="col-12">
+    <%= f.text_field :title, id: 'new-title-input',
+                             class: 'form-control',
+                             placeholder: t('.title_placeholder') %>
+  </div>
+  <div class="col-12">
+    <%= f.text_area :body, id: 'new-body-input',
+                           class: 'form-control',
+                           rows: 8 %>
+  </div>
+  <div class="col-12 d-md-flex justify-content-md-end">
+    <% if @note.id.present? %>
+      <div class="col-md-6 mr-3">
+        <%= link_to t('cancel'),
+                    new_note_path,
+                    class: 'btn btn-outline-danger mr-3',
+                    'data-turbolinks': false,
+                    remote: true %>
+      </div>
+      <div class="col-md-6 mr-3">
+        <%= f.submit note_form_submit_text(@note),
+                   class: 'btn btn-outline-secondary',
+                   'data-turbolinks': false %>
+      </div>
+    <% else %>
+      <%= f.submit note_form_submit_text(@note),
+                   class: 'btn btn-outline-secondary',
+                   'data-turbolinks': false %>
+    <% end %>
+
+  </div>
+<% end %>

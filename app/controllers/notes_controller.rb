@@ -1,25 +1,29 @@
 class NotesController < ApplicationController
-  before_action :find_note, only: %i[update destroy]
+  before_action :find_note, only: %i[edit update destroy]
 
   def index
+    @note = Note.new
     @notes = Note.all
                  .order(created_at: :desc)
                  .to_a
+  end
+
+  def new
+    @note = Note.new
   end
 
   def create
     @note = Note.create(note_params)
   end
 
+  def edit ; end
+
   def update
-    if @note.udpate(valid_params)
-      flash[:notice] = t('.success')
-    end
+    @note.update(note_params)
   end
 
   def destroy
     @article.destroy
-		redirect_to articles_path
   end
 
   private

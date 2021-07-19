@@ -1,7 +1,13 @@
 <% notes.each do |note| %>
   <div class="col-4">
-    <div class="card border-secondary mb-3" style="max-width: 18rem;">
-      <div class="card-header">
+    <button type="button"
+            class="btn-close"
+            aria-label="Close">
+    </button>
+    <%= link_to edit_note_path(note), class: 'card border-secondary mb-3 note-card',
+                                      style: 'max-width: 18rem;',
+                                      remote: true do %>
+      <div class="card-header card-title">
         <%= note.title %>
       </div>
       <div class="card-body text-secondary">
@@ -9,6 +15,6 @@
           <%= truncate(note.body, length: 100) %>
         </p>
       </div>
-    </div>
+    <% end %>
   </div>
 <% end %>
