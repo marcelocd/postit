@@ -1,4 +1,6 @@
 class Note < ApplicationRecord
+  include Hashid::Rails
+  
   validates :title, length: { minimum: 3,
                               maximum: 50 }
 

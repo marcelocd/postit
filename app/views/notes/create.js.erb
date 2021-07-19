@@ -1,6 +1,6 @@
 <% if @note.persisted? %>
   <% @notes = Note.all
-                  .order(created_at: :desc)
+                  .order(updated_at: :desc)
                   .to_a %>
   renderNotes();
   $('#new-title-input').val('')

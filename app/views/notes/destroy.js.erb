@@ -4,9 +4,29 @@
 
 renderNotes();
 
+<% if params[:clear_form] == 'true' %>
+  <% @note = Note.new %>
+  renderForm();
+<% end %>
+
+var data = $('#note-form').attr('data')
+var noteHashid = "<%= params[:note_hashid].to_s %>"
+
+if (data == noteHashid) {
+  <% @note = Note.new %>
+  renderForm();
+}
+
 function renderNotes() {
   var notesSelector = '#notes';
   var notes = "<%= j render 'index' %>";
+
+  $(notesSelector).replaceWith(notes);
+}
+
+function renderForm() {
+  var notesSelector = '#note-form';
+  var notes = "<%= j render 'form' %>";
 
   $(notesSelector).replaceWith(notes);
 }

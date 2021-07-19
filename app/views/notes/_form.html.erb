@@ -3,6 +3,7 @@
               method: note_form_method(@note),
               id: 'note-form',
               class: 'row g-3',
+              data: @note.try(:hashid),
               local: false do |f| %>
   <div class="col-12">
     <%= f.text_field :title, id: 'new-title-input',
@@ -16,20 +17,25 @@
   </div>
   <div class="col-12 d-md-flex justify-content-md-end">
     <% if @note.id.present? %>
-      <div class="row">
-        <div class="col-6 mr-3">
-          <%= link_to t('cancel'),
+      <div style="margin-right: auto;">
+          <%= link_to t('done'),
                       new_note_path,
-                      class: 'btn btn-outline-danger mr-3',
+                      class: 'btn btn-outline-warning',
                       'data-turbolinks': false,
                       remote: true %>
-        </div>
-        <div class="col-6 mr-3">
-          <%= f.submit note_form_submit_text(@note),
-                     class: 'btn btn-outline-secondary',
-                     'data-turbolinks': false %>
-        </div>
       </div>
+      <div style="margin-left: auto; margin-right: auto;">
+          <%= link_to t('delete'),
+                      note_path(@note, clear_form: true),
+                      method: :delete,
+                      class: 'btn btn-outline-danger',
+                      'data-turbolinks': false,
+                      'data-confirm': t('confirm_note_deletion'),
+                      remote: true %>
+      </div>
+      <%= f.submit note_form_submit_text(@note),
+                 class: 'btn btn-outline-secondary',
+                 'data-turbolinks': false %>
     <% else %>
       <%= f.submit note_form_submit_text(@note),
                    class: 'btn btn-outline-secondary',

@@ -1,7 +1,7 @@
 <% notes.each do |note| %>
   <div class="col-4">
     <%= button_to '',
-                  note_path(note),
+                  note_path(note, note_hashid: note.hashid),
                   method: :delete,
                   class: 'btn-close',
                   remote: true,
