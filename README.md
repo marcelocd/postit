@@ -48,7 +48,7 @@ The database used in this application is Postgres.
 In the `config/database.yml` file you can find the *`ENV['POSTIT_DATABASE_USERNAME']`* and *`ENV['POSTIT_DATABASE_PASSWORD']`* variables being used for authentication.
 So verify that you've set the right credentials in your environment for the application to connect with Postgres.
 
-### API Authentication
+### API
 #### Bearer token
 
 This app uses the *`ENV['AUTHORIZED_BEARER_TOKEN']`* variable for API authentication.
