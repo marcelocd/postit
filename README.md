@@ -1,9 +1,6 @@
 
 ![](postit.gif)
 
-
-![](postit.gif)
-
 # POSTIT
 
 A simple Ruby on Rails notepad application.
