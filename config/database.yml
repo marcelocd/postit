@@ -1,18 +1,17 @@
 default: &default
   adapter: postgresql
   pool: 5
+  username: "marcelo"
+  password: <%= ENV['POSTIT_DATABASE_PASSWORD'] %>
 
 development:
   <<: *default
   database: "postit_development"
-  url: "postgres://postgres:postgres@localhost:5432/postit_development"
 
 test:
   <<: *default
   database: "postit_test"
-  url: "postgres://postgres:postgres@localhost:5432/postit_test"
 
 production:
   <<: *default
   database: "postit_production"
-  url: "postgres://postgres:postgres@localhost:5432/postit_production"
