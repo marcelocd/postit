@@ -1,4 +1,4 @@
-en-US:
+en:
   activerecord:
     errors:
       messages:
@@ -222,5 +222,8 @@ en-US:
   confirm_note_deletion: Are you sure you want to delete this note?
   done: Done
   delete: Delete
-  no_notes_found: No noutes found
+  no_notes_found: No notes found
   note_not_found: Note not found
+  portuguese: Portuguese
+  english: English
+  language: Language
