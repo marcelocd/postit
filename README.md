@@ -1,3 +1,4 @@
+
 # POSTIT
 
 A simple Ruby on Rails notepad application.
@@ -42,6 +43,11 @@ If the test suite passes, you'll be ready to run the app in a local server:
 $ rails s
 ```
 ## Configuration
+### Database
+The database used in this application is Postgres.
+In the `config/database.yml` file you can find the *`ENV['POSTIT_DATABASE_USERNAME']`* and *`ENV['POSTIT_DATABASE_PASSWORD']`* being used for authentication.
+So verify that you've set the right credentials in your environment for the application to connect with Postgres.
+
 ### API Authentication
 #### Bearer token
 
@@ -51,6 +57,32 @@ So make sure you set the appropriate environment variable (*your .env file, for 
 ```
 AUTHORIZATION_BEARER_TOKEN = "choose_a_bearer_token"
 ```
+> *Note*: this token chosen is needed for ALL the API requests!
+
+## API usage
+The documentation for the API will be available here soon, but here is how you can make requests to it:
+
+
+#### List notes - GET
+```
+http://localhost:3000/api/v1/notes
+```
+
+#### Read note - GET
+```
+http://localhost:3000/api/v1/notes/(:id)
+```
+#### Create note - POST
+```
+http://localhost:3000/api/v1/notes/
+```
+> *Obs.*: Add the *title* and *body* fields with the desired values to the requet form data.
+
+#### Delete note - DELETE
+```
+http://localhost:3000/api/v1/notes/(:id)
+```
+
 ### *and...* Ready to go!
 
 ## License
