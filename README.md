@@ -74,7 +74,7 @@ http://localhost:3000/api/v1/notes/(:id)
 ```
 #### Create note - POST
 ```
-http://localhost:3000/api/v1/notes/
+http://localhost:3000/api/v1/notes
 ```
 > *Obs.*: Add the *title* and *body* fields with the desired values to the requet form data.
 
