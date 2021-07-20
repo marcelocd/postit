@@ -1,12 +1,9 @@
+# POSTIT
 
 ![](postit.gif)
 
-# POSTIT
-
 A simple Ruby on Rails notepad application.
 > PRs and issues welcome!
-
-
 
 # Getting started
 To get started, first clone the repo and `cd` into the directory:
