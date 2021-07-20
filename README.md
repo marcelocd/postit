@@ -6,6 +6,14 @@ A simple Ruby on Rails notepad application.
 
 ![](postit.gif)
 
+## Prerequisites
+
+- Ruby 3.0+
+- Rails 6.1.4+
+- Node.js 12+ || 14+
+- Yarn 1.x+ || 2.x+
+
+
 # Getting started
 To get started, first clone the repo and `cd` into the directory:
 
