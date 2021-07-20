@@ -17,13 +17,11 @@
   </div>
   <div class="col-12 d-md-flex justify-content-md-end">
     <% if @note.id.present? %>
-      <div style="margin-right: auto;">
           <%= link_to t('done'),
                       new_note_path,
                       class: 'btn btn-outline-warning',
                       'data-turbolinks': false,
                       remote: true %>
-      </div>
       <div style="margin-left: auto; margin-right: auto;">
           <%= link_to t('delete'),
                       note_path(@note, clear_form: true),
