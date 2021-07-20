@@ -1,7 +1,7 @@
 default: &default
   adapter: postgresql
   pool: 5
-  username: "marcelo"
+  username: <%= ENV['POSTIT_DATABASE_USERNAME'] %>
   password: <%= ENV['POSTIT_DATABASE_PASSWORD'] %>
 
 development:
