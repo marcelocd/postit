@@ -55,7 +55,7 @@ This app uses the *`ENV['AUTHORIZED_BEARER_TOKEN']`* variable for API authentica
 So make sure you set the appropriate environment variable (*your .env file, for example*):
 
 ```
-AUTHORIZATION_BEARER_TOKEN = "choose_a_bearer_token"
+AUTHORIZED_BEARER_TOKEN = "choose_a_bearer_token"
 ```
 > *Note*: this token chosen is needed for ALL the API requests!
 
