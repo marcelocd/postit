@@ -83,8 +83,6 @@ http://localhost:3000/api/v1/notes
 http://localhost:3000/api/v1/notes/(:id)
 ```
 
-### *and...* Ready to go!
-
 ## License
 
 This source code is available under the MIT License and the Beerware License. See [LICENSE.md](LICENSE.md) for details.
