@@ -2,43 +2,46 @@
               url: note_form_url(@note),
               method: note_form_method(@note),
               id: 'note-form',
-              class: 'row g-3',
+              class: 'row g-3 justify-content-center',
               data: @note.try(:hashid),
               local: false do |f| %>
-  <div class="col-12">
+  <div class="row mb-3">
     <%= f.text_field :title, id: 'new-title-input',
                              class: 'form-control',
                              placeholder: t('.title_placeholder') %>
   </div>
-  <div class="col-12">
+  <div class="row mb-4">
     <%= f.text_area :body, id: 'new-body-input',
                            class: 'form-control',
                            rows: 8 %>
   </div>
-  <div class="col-12 d-md-flex justify-content-md-end">
+  <div class="row d-md-flex justify-content-md-center">
     <% if @note.id.present? %>
-          <%= link_to t('done'),
-                      new_note_path,
-                      class: 'btn btn-outline-warning',
-                      'data-turbolinks': false,
-                      remote: true %>
-      <div style="margin-left: auto; margin-right: auto;">
-          <%= link_to t('delete'),
-                      note_path(@note, clear_form: true),
-                      method: :delete,
-                      class: 'btn btn-outline-danger',
-                      'data-turbolinks': false,
-                      'data-confirm': t('confirm_note_deletion'),
-                      remote: true %>
+      <div class="col-4">
+        <%= link_to t('done'),
+                    new_note_path,
+                    class: 'btn btn-outline-warning note-submit',
+                    'data-turbolinks': false,
+                    remote: true %>
       </div>
-      <%= f.submit note_form_submit_text(@note),
-                 class: 'btn btn-outline-secondary',
-                 'data-turbolinks': false %>
+      <div class="col-4">
+        <%= link_to t('delete'),
+                    note_path(@note, clear_form: true),
+                    method: :delete,
+                    class: 'btn btn-outline-danger note-submit',
+                    'data-turbolinks': false,
+                    'data-confirm': t('confirm_note_deletion'),
+                    remote: true %>
+      </div>
+      <div class="col-4">
+        <%= f.submit note_form_submit_text(@note),
+                     class: 'btn btn-outline-secondary note-submit',
+                     'data-turbolinks': false %>
+      </div>
     <% else %>
       <%= f.submit note_form_submit_text(@note),
-                   class: 'btn btn-outline-secondary',
+                   class: 'btn btn-outline-secondary col-4 mx-auto note-submit',
                    'data-turbolinks': false %>
     <% end %>
-
   </div>
 <% end %>

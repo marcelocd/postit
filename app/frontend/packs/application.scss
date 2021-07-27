@@ -20,8 +20,8 @@ html, body {
 }
 
 .note-card:hover {
-  transition: transform 1s;
-  transform: scale(1.05);
+  transition: transform 0.3s;
+  transform: scale(1.02);
 }
 
 .note-card:hover:after {
@@ -30,4 +30,9 @@ html, body {
 
 .card-title {
   color: #212529;
+}
+
+.note-submit:hover {
+  transition: transform 0.5s;
+  transform: scale(1.04);
 }

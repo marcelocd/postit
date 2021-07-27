@@ -9,8 +9,8 @@ pt-BR:
   notes:
     form:
       title_placeholder: Título
-      create: Criar Nota
-      update: Atualizar Nota
+      create: Criar
+      update: Atualizar
   date:
     abbr_day_names:
     - dom
